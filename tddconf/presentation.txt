@@ -1,0 +1,96 @@
+
+* historycal issues of TDD since 2001 to 2012
+** "Extreme Programming Explained: Embrace Change" at Oct 5, 1999
+*** Principle: Code the Unit Test First
+** "Test Driven Development: By Example" shipped at Nov 18, 2002
+*** Principle: Test driven development
+
+* 最初に示されてた手順
+** Think about what you want to do.
+*** 何が欲しいのか考える
+** Think about how to test it.
+*** それをどうやってテストするか考える
+** Write a small test. Think about the desired API.
+*** 欲しい API について小さいテストを書いて考える
+** Write just enough code to fail the test.
+*** テストを失敗させるだけの最小限の実装を書く
+** Run and watch the test fail. (The test-runner, if you're using something like JUnit, shows the "Red Bar"). Now you know that your test is going to be executed.
+*** テストを実行して失敗するのを確認する。テストが実行できたことを確認する。
+** Write just enough code to pass the test (and pass all your previous tests).
+*** テストを成功させるだけの最小限の実装を書く
+** Run and watch all of the tests pass. (The test-runner, if you're using JUnit, etc., shows the "Green Bar"). If it doesn't pass, you did something wrong, fix it now since it's got to be something you just wrote.
+*** テストを実行して全て成功するのを確認する。失敗するなら何かが間違ってるので書いたものを直す。
+** If you have any duplicate logic, or inexpressive code, refactor to remove duplication and increase expressiveness -- this includes reducing coupling and increasing cohesion.
+*** 重複したロジックや安物のコードがあればリファクタリングする
+**** 安物のコードとは品質でも見た目でもなく、何らかの価値基準に照らし合わせた結果としての安さを意味する
+** Run the tests again, you should still have the Green Bar. If you get the Red Bar, then you made a mistake in your refactoring. Fix it now and re-run.
+*** 再びテストを実行して全て成功するのを確認する。失敗するなら何かが間違ってるので書いたものを直す。
+** Repeat the steps above until you can't find any more tests that drive writing new code.
+*** 以上の手順を、新しいコードを書くためのテストが思い付かなくなるまで繰り返す
+
+* アイテム 1 が一番難しいし、アイテム 3 以降と比較して重要な意味を持ってる
+* アイテム 1 は、オンサイトカスタマーが発し続ける何か
+
+* ユーザの要望を越えてテストに必要なことを明らかにする順序
+** オンサイトカスタマーの使うビジネスの言葉を、技術的な言葉に翻訳する
+** アイテム 2 は、アイテム 1 を inside-out に捉えたもの
+** エンドユーザが必要としないことを明らかにする
+
+* 設計に与える影響
+** 再利用性の向上
+** テストコードがあるのでリファクタリングができる
+** 各々の小さな段階で注意していると、コードのパターンを見出せる
+** コードが書きやすくなる
+** 先行投資でないやりかたでデザインパターンが活用される
+** テストコードはインターフェースに対して書かれるので、シンプルな設計になる
+** よいユニットテストは 1 つのことだけをテストするので、コードの結合度が下がる
+
+* XP で示された開発のプラクティスの 1 つ
+* 生産性が上がる
+* コードの品質が上がる
+* デバッガの起動頻度が下がる
+* 数学的な証明や先入観ではなく具体的なテストケースを使う
+** 「契約による設計」と相補的
+** mathematical assertions or preconceptions
+
+* "Test-Driven Development: A Practical Guide" July 12, 2003
+** David Astel
+** 592 pages
+** Background of TDD
+*** テストカバレッジを限界まで向上する
+*** 自信を持ってリファクタリングできる
+
+* 危険な考え
+** 実際の要件を満たすために必要な実装ではなく、テストを通すための実装に執着してしまう
+** 限定されたテストケースを相手に設計を考えてしまう
+** 境界条件や異常系について忘れがち
+** ペアプロで立ち向かいましょう
+
+* 実際の要件をテストしないという判断はどうやってるか
+** 特殊化されすぎてる
+** テストのコストが高すぎる
+** ハードウェアのサポートが不足してる
+
+* 経験上、プロトタイピングで TDD をするのは重いのでお勧めできない
+** 開発サイクルの初めには多くのオブジェクトやそれらの間のインターフェースがある
+** これら全てをテストファーストで書いていくとすごい時間がかかる
+
+* プロトタイピングも設計のテストの 1 つなのでは
+** プロトタイプが製品になるっていう幻想こそが問題
+
+* 設計(プロセス?)は、それを実装する段階になるととても難しいものになってる
+** ユニットテストは、設計(プロセス?)の中のただ 1 つの設計を確認することができる
+
+* オブジェクト指向設計自体が TDD を難しくしている
+
+* GUI を TDD で作るのはフラストレーションが溜まるけど、TDD で作られた GUI Toolkit ならそんなことはないの？
+
+* モックの乱用
+** モックは、ネイティブなオブジェクト(ファイルシステム、乱数)のスタブとして使うべき
+** 他のオブジェクトの代替として使うべきじゃないよ
+
+* TDD の本質
+** よい分析、よい設計をすることにある
+
+* TDD を拡張した PDD (Purpose Driven Development) の提案
+** 
