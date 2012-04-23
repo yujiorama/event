@@ -1,0 +1,31 @@
+#+TITLE:Think about UnitTest in 能楽ホール (#鹿駆動)
+#+AUTHOR:Yuji Okazawa {@yujiorama (released)}
+#+EMAIL:yujiorama_at_gmail.com
+#+OPTIONS: H:1
+* UnitTest in Nuts Shell
+
+ユニットテストについて 5 行で示す
+
+* Why UnitTest ?
+
+どうしてユニットテストをテーマにしたのか 3 行で示す
+
+* Mental Model of System Architecture (by 2 years ago)
+
+レイヤードアークテクチャの誤解について 3 行で。
+
+* The Unit is...
+
+レイヤードアーキテクチャでのユニットとその問題について 3 行で。
+
+* Mental Model of System Architecture (recently)
+
+同心円アーキテクチャと ports パターン。
+
+* The Unit is...
+
+ドメインが話すことについて。
+
+* Conclusion
+
+まとめん。
